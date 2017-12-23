@@ -1,0 +1,70 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>{{ title1 }}</h3>
+    <h4>{{ title2 }}</h4>
+    <p>Sources <a href='put-link-here'>put-link-here</a></p>
+
+    <h3>API examples:</h3>
+    <table>
+        <tr>
+            <td>Get all items</td>
+            <td><a href='/api/items'>/api/items</a></td>
+        </tr>
+        <tr>
+            <td>Get item with id=1 </td>
+            <td><a href='/api/items/1'>/api/items/1</a></td>
+        </tr>
+        <tr>
+            <td>Get items on date 2017-12-23</td>
+            <td> <a href='/api/items/dates/2017-12-23'>/api/items/dates/2017-12-23</a></td>
+        </tr>
+        <tr>
+            <td>Get items in date range 2017-12-23 / 2017-12-26  </td>
+            <td><a href='/api/items/dates/2017-12-23/2017-12-26'>/api/items/dates/2017-12-23/2017-12-26</a></td>
+        </tr>
+        <tr>
+            <td>Get ongoing items</td>
+            <td><a href='/api/items/now'>/api/items/now</a></td>
+        </tr>
+        <!--------------------------------->
+        <tr><td><hr></td></tr>
+
+        <tr>
+            <td>Get all places</td>
+            <td><a href='/api/places'>/api/places</a></td>
+        </tr>
+        <tr>
+            <td>Get place with id=1 </td>
+            <td><a href='/api/places/1'>/api/places/1</a></td>
+        </tr>
+        <tr>
+            <td>Get items related to place with id=1 </td>
+            <td><a href='/api/places/1/items'>/api/places/1/items</a></td>
+        </tr>
+        <tr>
+            <td>Get items related to place with id=1 on UTC datetime 2017-12-22 23:00:00</td>
+            <td> <a href='/api/places/1/items/dates/2017-12-22T23:00:00'>/api/places/1/items/dates/2017-12-22T23:00:00</a></td>
+        </tr>
+        <tr>
+            <td>Get items related to place with id=1 in UTC datetime range 2017-12-22 23:00:00/ 2017-12-25 23:00:00  </td>
+            <td><a href='/api/places/1/items/dates/2017-12-22T23:00:00/2017-12-25T23:00:00'>/api/places/1/items/dates/2017-12-22T23:00:00/2017-12-25T23:00:00</a></td>
+        </tr>
+        <tr>
+            <td>Get ongoing event & upcoming event for place id=1</td>
+            <td><a href='/api/places/1/items/now'>/api/places/1/items/now</a></td>
+        </tr>
+        <!--------------------------------->
+        <tr><td><hr></td></tr>
+        <!--<tr>
+            <td>Get today events from linked Google Calendar for place id=1</td>
+            <td><a href='/api/places/1/google-calendar'>/api/places/1/google-calendar</a></td>
+        </tr>
+        -->
+
+
+    </table>
+    <h3><em>All datetime stamps in UTC according to ISO-8601</em></h3>
+
+{% endblock %}
