@@ -19,6 +19,7 @@ of their booking services.
 ### 2. Design and Implementation
 The general structure of the project
 
+
 ![General Structure](Meeting-Room-Keeper.png)
 
 The basic backend architecture builded using FLASK framework extended with flask-restful, flask_sqlalchemy,
@@ -80,10 +81,11 @@ _The brief API endpoints specification_
 
 
 
+
 #### 2.2 Front-end Architecture Design
 
 
-##### 2.3 Database Schemas, Design and Structure
+#### 2.3 Database Schemas, Design and Structure
 
 ![DB ERD Diagram](DB/meet-room-db.png)
 
